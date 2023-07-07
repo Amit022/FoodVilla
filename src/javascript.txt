@@ -1,0 +1,33 @@
+// HOF
+
+function f(a,fn){
+console.log(a);
+fn();
+}
+
+f(10, function exec(){
+console.log("I am a HOF");
+})
+
+let arrayy=[1,2,5,100,10,1000,4,2];
+
+arrayy.sort();  //  it sorts the array in lexographical order so if we want to sort it in increasing order then we have to pass function to it as sort is HOF.
+
+let b=[1,2,5,100,10,1000,4,2];
+
+b.sort(function (a,b){
+ return a-b;
+})
+
+console.log(b);
+
+when we are passing function to another function as an argument then the passed 
+function is known as callback function.
+
+problems with callback:
+
+1) Inversion of control ( promises can resolve this issue)
+2) callback hell
+
+
+

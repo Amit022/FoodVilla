@@ -1,0 +1,97 @@
+/**
+ * React is fast in itself but it needs a lpt of things to beit fast it uses so many modules like 
+ parcel,bundlers etc
+ * Hot module replacement(HMR): once any change happend in any file immediately it reflects in ui
+ * File watcher algorithm - written in C++
+ * when we write npx parcel index,js it creates a development build
+ * and it hosts on the server.
+ * if we want to create a production build then we have to use
+ * npx parcel build index.html
+ * parcel is a bundler which minifies the code.
+ * cleaning the code like console logs
+ * parcel is a beast
+ * it manages dev and production build
+ * it is super fast
+ * image optimization
+ * caching while development
+ * if we want to change from http to https then we have to write command like
+ * npm parcel index.html --https
+ * we should put parcel.cache in our git ignore
+ * because whatever we can generate on the server
+ * zero config
+ *
+ *
+ * browserList used to give the versions of browsers supported
+ *
+ * Tree Shaking-- removing un-wanted code means when we import any library
+ * so it comes with a lot of functions and we are using only 2-3 functions in
+ * our code so it will smartly remove all other code.
+ *
+ *
+ * if we want to remove the console logs from the projects then we have
+ * to use babel plugin: seach on google and install the plugin:
+ * babel plugin transform remove consoles
+ *
+ *
+ * JSX- this is html like syntax not html inside javascript
+ *
+ * function component is just a normal function it returns JSX
+ * so heading1 is react element and headerComponent is a functional component
+ * React element is nothing but a object at the end of the day
+ *
+ * if we are using component inside another component then it is known as
+ * component composition.
+ *
+ *why react is fast??
+ React uses something known as virtual DOM,Virtual DOM is the representaion of the actual DOM 
+ and react uses something 
+ known as recoinciliation and it is a process where we have a diff algorithm which finds out 
+ the difference between the one tree and other tree and once we find out the difference 
+ it re-renders only that part
+
+ React fibre is a new coinciliation engine introduced in react 16
+ *Reconciliation is an algorithm to diff one tree from another to identify what needs to be changed
+ * so we can use react element inside the functional component using curly braces and it will put
+  all jsx inside there
+ */
+/**
+ *
+ * Hooks is nothing but a normal javascript functions used to create local state variables in react
+ */
+
+ routing:
+ there are two types of routing 
+ 1. Client side routing
+ 2. Server side routing
+ earlier we use anchor tag its not a good way becoz its reloads the entire page
+ in our react js we use client side routing as all components are there in our project it does not
+  require any api call or load from server.
+ * we write link in code but react uses anchor tag link component uses a achor tag because browser 
+ understand anchor tag
+* if we want to keep the headera nd footer intact and only the body part changes based on the 
+childeren passed to routes
+* create login page using formik(assignment)
+
+***class based components:
+ when the react renders it renders in two phases one is render phase and 
+ other is commit phase where in render phase it callconstructor and 
+ render method and in commit phase react actually updates the DOM it call componentDidMount
+
+ *** Hooks at the end of day is a normal JS function,it has mainly 3 advantages:
+     1) Readability
+     2) Reuseability
+     3) Maintable 
+
+
+*** lazy loading or code splitting 
+when we do dynamic import or loading ur component in demand at that time react tries to suspend it.
+
+REDUX TOOLKIT:
+* WHEN WE CLICK ON ADD BUTTON IT WILL DISPATCH AN ACTION WHICH CALLS A REDUCER FUNCTION
+WHICH WILL MODIFY THE SLICE OF THE STORE I.E CART AND WE USE SELECTOR TO GET(READ) THE DATA 
+FROM THE STORE WHICH WE UPDATE IN THE CART.
+SELECTOR IS A FUNCTION AT THE END OF THE DAY.
+
+THAT FUNCTION IS KNOWN AS REDUCER
+*reduxjs/toolkit - its a core of the library
+npm install react-redux - its a bridge between the react and redux
